@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form</title>
+	<script src="main.js"></script>
+</head>
+<body>
+	<form name = "test">
+		Username: <br>
+		<input type="text" name = "Username" value="">
+		<br>
+		Email: <br>
+		<input type="text" name="Email" value="">
+		<br>
+		Phone Number: <br>
+		<input type="text" name="Phone Number" value="">
+		<br>
+		Enter Password: <br>
+		<input type="password" name="Password" value="">
+		<br>
+		Confirm Password: <br>
+		<input type="password" name="Password Confirmation" value="">
+
+		<div>
+        		<label>Gender:</label><br>
+        		<input type="radio" id="male" name="gender" value="male" required>
+        		<label for="male">Male</label><br>
+        		<input type="radio" id="female" name="gender" value="female">
+        		<label for="female">Female</label><br>
+        		<input type="radio" id="other" name="gender" value="other">
+        		<label for="other">Other</label><br>
+    		</div>
+		
+		<div>
+			<label for="age_group">Age Group</label><br>
+			<select id="age_group" name="age_group">
+			<option value=""></option>
+			<option value=">21"> < 21 years old</option>
+			<option value="21-15"> 21-25 years old</option>
+			<option value="26-35"> 26-35 years old</option>
+			<option value="36-50"> 21-25 years old</option>
+			<option value="<50"> > 50 years old</option>
+			</select>
+		</div>
+
+		<div>
+			<legend>Favorite Music Genre:</legend>
+			<input type="checkbox" id="pop" name="music_genre[]" value="Pop">
+        		<label for="pop">Pop</label><br>
+        		<input type="checkbox" id="hiphop" name="music_genre[]" value="Hiphop">
+        		<label for="hiphop">Hiphop</label><br>
+        		<input type="checkbox" id="jazz" name="music_genre[]" value="Jazz">
+        		<label for="jazz">Jazz</label><br>
+			<input type="checkbox" name="music_genre" value="Rock" id="Rock/>		
+			<label for="rock>Rock</label><br />
+			<input type="checkbox" name="music_genre" value="Classical Music" id="Classical/>
+			<label for="classical>Classical</label><br />
+			<input type="checkbox" name="music_genre" value="Country" id="Country/>		
+			<label for="country>Country</label><br />
+		</div>
+		<br><br>
+		<input type="button" value="Submit" onclick="getInput()">
+		<input type="reset" value="Clear" onclick="getInput()">
+		<div id="output"></div>
+	</form>
+
+</body>
+</html>
