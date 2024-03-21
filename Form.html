@@ -6,13 +6,11 @@
 </head>
 <body>
 	<h2>Registration Form</h2>
-	<form name = "registrationForm">
+	<form name = "registrationForm" action="#" method="post" onsubmit="validateForm()">
 		<div>
 			<label for="username">Username: </label>
 			<input type="text" id="username" name="username" value="">
-			<input type="text" id="username" name="username" pattern="[a-z0-9]{4,12}" required><br>
-        		<span class="error">Username must be 4-12 characters long and contain only lowercase letters or numbers</span>
-    </div>
+			<span class="error"></span>
 		</div>
 		<br>
 		<div>
@@ -26,27 +24,27 @@
 		</div>
 		<br>
 		<div>
-			<label for="password">Enter Password: <br>
+			<label for="password">Enter Password:
 			<input type="password" id="password" name="Password" value="">
 		</div>
 		<br>
 		<div>
-			<label for="confirm_password">Confirm Password: <br>
+			<label for="confirm_password">Confirm Password:
 			<input type="password" id="confirm_password" name="confirm_password" value="">
 		</div>
 		<br>
 		<div>
-        		<label>Gender:</label><br>
+        		<label>Gender:</label>
         		<input type="radio" id="male" name="gender" value="male" required>
-        		<label for="male">Male</label><br>
+        		<label for="male">Male</label>
         		<input type="radio" id="female" name="gender" value="female">
-        		<label for="female">Female</label><br>
+        		<label for="female">Female</label>
         		<input type="radio" id="other" name="gender" value="other">
-        		<label for="other">Other</label><br>
+        		<label for="other">Other</label>
     		</div>
 		<br>
 		<div>
-			<label for="age_group">Age Group</label><br>
+			<label for="age_group">Age Group</label>
 			<select id="age_group" name="age_group">
 			<option value=""></option>
 			<option value=">21"> < 21 years old</option>
@@ -59,23 +57,22 @@
 		<br>
 		<div>
 			<legend>Favorite Music Genre:</legend>
-			<input type="checkbox" id="pop" name="music_genre[]" value="Pop">
-        		<label for="pop">Pop</label><br>
+				<input type="checkbox" id="pop" name="music_genre[]" value="Pop">
+        		<label for="pop">Pop</label>
         		<input type="checkbox" id="hiphop" name="music_genre[]" value="Hiphop">
-        		<label for="hiphop">Hiphop</label><br>
+        		<label for="hiphop">Hiphop</label>
         		<input type="checkbox" id="jazz" name="music_genre[]" value="Jazz">
-        		<label for="jazz">Jazz</label><br>
-			<input type="checkbox" name="music_genre" value="Rock" id="Rock/>		
-			<label for="rock>Rock</label><br />
-			<input type="checkbox" name="music_genre" value="Classical Music" id="Classical/>
-			<label for="classical>Classical</label><br />
-			<input type="checkbox" name="music_genre" value="Country" id="Country/>		
-			<label for="country>Country</label><br />
+        		<label for="jazz">Jazz</label>
+				<input type="checkbox" name="music_genre" value="Rock" id="Rock/>		
+				<label for="rock>Rock</label>
+				<input type="checkbox" name="music_genre" value="Classical Music" id="Classical/>
+				<label for="classical>Classical</label>
+				<input type="checkbox" name="music_genre" value="Country" id="Country/>		
+				<label for="country>Country</label>
 		</div>
-		<br><br>
-		<input type="button" value="Submit" onclick="getInput()">
-		<input type="reset" value="Clear" onclick="getInput()">
-		<div id="output"></div>
+		<br>
+		<input type="button" value="Submit">
+		<input type="reset" value="Clear">
 	</form>
 
 </body>
