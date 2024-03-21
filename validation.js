@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     function printErrorMessage(fieldName, color) {
-        const errorMessage = document.createElement('p');
+        const errorMessage = document.createElement('span');
         errorMessage.textContent = `${fieldName} field is not valid`;
         errorMessage.style.color = color;
         const field = document.querySelector(`label[for="${fieldName.toLowerCase()}"] + input`);
