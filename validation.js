@@ -19,4 +19,6 @@
         } else {
             document.getElementById("emailError").textContent = "";
         }
+
+        return isValid;
     }
