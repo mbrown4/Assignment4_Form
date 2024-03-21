@@ -6,7 +6,7 @@
 </head>
 <body>
 	<h2>Registration Form</h2>
-	<form name = "registrationForm" action="#" method="post">
+	<form name = "registrationForm" action="#" method="post" onsubmit="return validateForm()">
 		<div>
 			<label for="username">Username: </label>
 			<input type="text" id="username" name="username" value="">
@@ -47,11 +47,11 @@
 			<label for="age_group">Age Group</label>
 			<select id="age_group" name="age_group">
 			<option value=""></option>
-			<option value=">21"> < 21 years old</option>
+			<option value=">21"> &lt; 21 years old</option>
 			<option value="21-15"> 21-25 years old</option>
 			<option value="26-35"> 26-35 years old</option>
 			<option value="36-50"> 21-25 years old</option>
-			<option value="<50"> > 50 years old</option>
+			<option value=">50"> &gt; 50 years old</option>
 			</select>
 		</div>
 		<br>

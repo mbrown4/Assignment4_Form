@@ -1,41 +1,22 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('registrationForm');
-    
     function validateForm() {
-        const usernameInput = document.getElementById('username');
+        const usernameInput = document.forms["registrationForm"]["username"].value;
         const usernameError = document.querySelector('#username + .error');
+
+        var isValid = true;
         
-        // Reset previous error messages
-        usernameError.textContent = '';
-        
-        // Check if the username field is empty
-        if (usernameInput.value.trim() === '') {
-            printErrorMessage('Username', 'red');
-            return false;
+        // Validation for username
+         if (username.length < 4 || username.length > 12 || !/^[a-z0-9]+$/.test(username)) {
+            document.getElementById("usernameError").textContent = "Invalid username";
+            isValid = false;
+        } else {
+            document.getElementById("usernameError").textContent = "";
         }
         
-        // Check if the username is valid (contains only lowercase letters or numbers)
-        if (!/^[a-z0-9]{4,12}$/.test(usernameInput.value)) {
-            printErrorMessage('Username', 'orange');
-            return false;
+        // Validation for email
+        if (!/^\S+@\S+\.(net|com|org|edu)$/.test(email)) {
+            document.getElementById("emailError").textContent = "Invalid email";
+            isValid = false;
+        } else {
+            document.getElementById("emailError").textContent = "";
         }
-        
-        // If all checks pass, return true to submit the form
-        return true;
     }
-    
-    function printErrorMessage(fieldName, color) {
-        const errorMessage = document.createElement('span');
-        errorMessage.textContent = `${fieldName} field is not valid`;
-        errorMessage.style.color = color;
-        const field = document.querySelector(`label[for="${fieldName.toLowerCase()}"] + input`);
-        field.parentNode.appendChild(errorMessage);
-    }
-    
-    form.addEventListener('submit', function(event) {
-        // Prevent form submission if validation fails
-        if (!validateForm()) {
-            event.preventDefault();
-        }
-    });
-});
